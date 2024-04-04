@@ -1,0 +1,12 @@
+<h2>Enter Your Location</h2>
+<form (ngSubmit)="submitLocation()">
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" [(ngModel)]="location" required>
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<div *ngFor="let item of finalres">
+    <!-- <p *ngFor="let list of item">list.text</p> -->
+    <p *ngFor="let items of item.content">{{items.text}}      </p>
+</div>
